@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Task form styling */
+.task-form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.task-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 22px);
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-form button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Action column spacing */
+.task-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* space between Delete / dropdown / Update */
+}
+
+.task-actions form {
+    display: flex;
+    gap: 5px; /* space between dropdown and button */
+}
+
+/* Logout link spacing */
+.logout {
+    margin-top: 20px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #2563eb;
+}

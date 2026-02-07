@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Task Dashboard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h2>Task Dashboard</h2>
+
+<!-- Add Task Form -->
+<div class="task-form">
+    <form method="post" action="/task">
+        <input name="title" placeholder="New Task" required>
+        <button>Add</button>
+    </form>
+</div>
+
+<!-- Tasks Table -->
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    <tr th:each="t : ${tasks}">
+        <td th:text="${t.title}"></td>
+        <td th:text="${t.status}"></td>
+        <td class="task-actions">
+            <a th:href="@{/delete(id=${t.id})}">Delete</a>
+            <form method="post" action="/update">
+                <input type="hidden" name="id" th:value="${t.id}">
+                <select name="status">
+                    <option>Pending</option>
+                    <option>Done</option>
+                </select>
+                <button>Update</button>
+            </form>
+        </td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>
